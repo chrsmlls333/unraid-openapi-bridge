@@ -1,0 +1,10 @@
+services:
+  unraid-openapi-bridge:
+    build: .
+    image: unraid-openapi-bridge:latest
+    container_name: unraid-openapi-bridge
+    restart: unless-stopped
+    ports:
+      - "8085:8080"
+    env_file:
+      - .env
